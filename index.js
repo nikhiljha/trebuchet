@@ -1,14 +1,19 @@
-const { app, BrowserWindow, screen } = require('electron');
+const { app, BrowserWindow, Menu, screen } = require('electron');
 require('electron-reload')(__dirname);
 
 const createWindow = () => {
     const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
+    // Menu.setApplicationMenu(false);
+
     window = new BrowserWindow({
-        width: width / 1.25,
-        height: height / 1.25,
+        // width: width / 2,
+        // height: height / 1.25,
+        width: 320,
+        height: 480,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            enableRemoteModule: true
         }
     });
 
