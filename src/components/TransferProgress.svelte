@@ -1,6 +1,6 @@
 <script>
-    import state from "./store.js";
-    import { IncomingTransfer, OutgoingTransfer } from './transfer.js';
+    import state from "../helpers/store.js";
+    import { IncomingTransfer, OutgoingTransfer } from '../helpers/transfer.js';
 
     export let transfer;
 

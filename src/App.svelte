@@ -1,9 +1,9 @@
 <script>
-	import Header from "./Header.svelte";
-	import Dropper from "./Dropper.svelte";
-	import TransferProgress from "./TransferProgress.svelte"
+	import Header from "./components/Header.svelte";
+	import Dropper from "./components/Dropper.svelte";
+	import TransferProgress from "./components/TransferProgress.svelte"
 
-	import state from "./store.js";
+	import state from "./helpers/store.js";
 
 	export let transfer;
 

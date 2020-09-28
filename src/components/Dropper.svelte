@@ -1,13 +1,12 @@
 <script>
     const { dialog } = require("electron").remote;
     const prompt = require("electron-prompt");
-    import { IncomingTransfer, OutgoingTransfer } from "./transfer.js";
-    import state from "./store.js";
+    import { IncomingTransfer, OutgoingTransfer } from "../helpers/transfer.js";
+    import state from "../helpers/store.js";
 
     export let temp = "";
 
     const callback = (obj) => {
-        console.log("called back");
         state.update((current) => {
             return null;
         });

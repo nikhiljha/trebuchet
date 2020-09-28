@@ -1,5 +1,5 @@
 const { spawn } = require( 'child_process' );
-import state from './store.js';
+import state from './helpers/store.js';
 
 // TODO: Don't hardcode this.
 function get_croc_path() {
