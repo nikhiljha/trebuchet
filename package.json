@@ -9,6 +9,8 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "custom-electron-titlebar": "^3.2.4",
+    "electron-builder": "^22.8.1",
     "node-sass": "^4.14.1",
     "rollup": "^2.3.4",
     "rollup-plugin-livereload": "^2.0.0",
@@ -18,8 +20,11 @@
     "svelte-preprocess": "^4.3.0"
   },
   "dependencies": {
+    "@treverix/remote": "^0.1.1",
     "electron": "^10.1.2",
+    "electron-prompt": "^1.6.0",
     "electron-reload": "^1.5.0",
+    "electron-root-path": "^1.0.16",
     "rollup-plugin-scss": "^2.6.0",
     "sirv-cli": "^1.0.0"
   },
@@ -37,6 +42,17 @@
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/nikhiljha/trebuchet/issues"
+  },
+  "build": {
+    "extraFiles": [
+      {
+        "from": "build/mac/bin",
+        "to": "Resources/bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
   },
   "homepage": "https://github.com/nikhiljha/trebuchet#readme"
 }
